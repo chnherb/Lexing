@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        applicationId "com.example.locationdemo"
+        minSdkVersion 8
+        targetSdkVersion 18
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.1.0'
+    compile files('libs/Android_Location_V1.1.2.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+}
